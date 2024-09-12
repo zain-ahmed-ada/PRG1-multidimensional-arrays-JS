@@ -27,7 +27,7 @@ So, starting with Begonia, we notice that the pointer is 1, so we look at the va
 In JS, this looks like this:
 
 ```js
-plants = [["Begonia", "Daisy", "Lily", "Peony", "Rose", "Sunflower", "Lavender"], [1,6,3,4,5,null,2]]
+const plants = [["Begonia", "Daisy", "Lily", "Peony", "Rose", "Sunflower", "Lavender"], [1,6,3,4,5,null,2]];
 ```
 
 So, we can write an algorithm that uses the pointer values in row 1 to print out the list in alphabetical order, without changing the order of the flowers in the array: Begonia -> Daisy -> Lavender -> Lily -> Peony -> Rose -> Sunflower.
