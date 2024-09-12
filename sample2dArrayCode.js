@@ -1,82 +1,70 @@
-const task = ["a", "b", "c", "d"]
+const tasks = ["a", "b", "c", "d"];
 
-
-for (let letter in task){
-  console.log(task[letter])
+for (const letter of tasks) {
+  console.log(letter);
 }
 
 
+const scores = [
+  [78, 81, 84],
+  [55, 54, 62],
+  [89, 71, 90],
+];
 
-let scores = [ [78, 81, 84], [55, 54, 62], [89, 71, 90] ];
-
-
-let scores = [ [78, 81, 84], 
-               [55, 54, 62], 
-               [89, 71, 90] ];
-
-
-let tests = ["c","b","a"]
-tests.sort()
-console.log(tests)
-
-
+let tests = ["c", "b", "a"];
+tests.sort();
+console.log(tests);
 
 console.log(scores.length);
 
 
-
-for (score of scores){
+for (const score of scores) {
   console.log(score);
 }
 
-
-
-for (score of scores){
-  for (element of score) {
+for (const score of scores) {
+  for (const element of score) {
     console.log(element);
   }
 }
 
-for (let i = 0; i < scores.length; i++){
-  console.log(scores[i])
+
+for (const score of scores) {
+  console.log(score);
 }
 
-
-for (let i = 0; i < scores.length; i++){
-  for (let j = 0; j < scores[i].length; j++){
+// Traditional `for` loop when index is needed
+for (let i = 0; i < scores.length; i++) {
+  for (let j = 0; j < scores[i].length; j++) {
     console.log(scores[i][j]);
   }
 }
 
+let max = 0;
 
-let max = 0
-
-scores.forEach(score => {
-  score.forEach(value => {
-    if (value > max){
-      max = value
+scores.forEach((score) => {
+  score.forEach((value) => {
+    if (value > max) {
+      max = value;
     }
-  })
-})
-console.log(max)
+  });
+});
+console.log(max);
 
 
-function calculateMaxValue(df1){
+function calculateMaxValue(data) {
   let max = 0;
-  df1.forEach(score => {
-    score.forEach(value => {
-      if (value > max){
+  data.forEach((score) => {
+    score.forEach((value) => {
+      if (value > max) {
         max = value;
       }
-    })
-  
-  })
-  return max
+    });
+  });
+  return max;
 }
 
-
-console.log(calculateMaxValue(scores))
-
+console.log(calculateMaxValue(scores));
 
 
 
