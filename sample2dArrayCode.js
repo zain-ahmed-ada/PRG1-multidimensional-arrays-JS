@@ -1,4 +1,4 @@
-task = ["a", "b", "c", "d"]
+const task = ["a", "b", "c", "d"]
 
 
 for (let letter in task){
