@@ -4,7 +4,6 @@ for (const letter of tasks) {
   console.log(letter);
 }
 
-
 const scores = [
   [78, 81, 84],
   [55, 54, 62],
@@ -17,7 +16,6 @@ console.log(tests);
 
 console.log(scores.length);
 
-
 for (const score of scores) {
   console.log(score);
 }
@@ -27,7 +25,6 @@ for (const score of scores) {
     console.log(element);
   }
 }
-
 
 for (const score of scores) {
   console.log(score);
@@ -51,7 +48,6 @@ scores.forEach((score) => {
 });
 console.log(max);
 
-
 function calculateMaxValue(data) {
   let max = 0;
   data.forEach((score) => {
@@ -65,12 +61,6 @@ function calculateMaxValue(data) {
 }
 
 console.log(calculateMaxValue(scores));
-
-
-
-
-
-
 
 //To declare an empty multidimensional array, you use the same syntax as declaring one-dimensional array:
 //let activities = [];
@@ -86,7 +76,7 @@ console.log(calculateMaxValue(scores));
 
 //console.log(activities[3][1]); // 9
 
-//to add a new element at the end of the multidimensional array, you use the push() method 
+//to add a new element at the end of the multidimensional array, you use the push() method
 
 //activities.push(['Study',2]);
 
