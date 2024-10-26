@@ -1,53 +1,65 @@
+// This program demonstrates the use of 2D arrays in JavaScript
+
+// A simple array of tasks (strings)
 const tasks = ["a", "b", "c", "d"];
 
+// Iterating through the tasks array using a for...of loop
 for (const letter of tasks) {
-  console.log(letter);
+  console.log(letter); 
 }
 
+// A 2D array representing scores for different tests
 const scores = [
-  [78, 81, 84],
-  [55, 54, 62],
-  [89, 71, 90],
+  [78, 81, 84], // Scores for student 1
+  [55, 54, 62], // Scores for student 2
+  [89, 71, 90], // Scores for student 3
 ];
 
-let tests = ["c", "b", "a"];
-tests.sort();
-console.log(tests);
+// Another array of strings, demonstrating the sort() method
+let tests = ["c", "b", "a"]; 
+tests.sort(); // Sorts the tests array alphabetically
+console.log(tests); // Output: ["a", "b", "c"]
 
-console.log(scores.length);
+// Getting the number of rows (students) in the scores array
+console.log(scores.length); // Output: 3
 
+// Iterating through the rows (each row is an array of scores)
 for (const score of scores) {
-  console.log(score);
+  console.log(score); // Output: each student's scores array
 }
 
+// Nested loop to access individual elements (scores) in the 2D array
 for (const score of scores) {
   for (const element of score) {
-    console.log(element);
+    console.log(element); // Output: each individual score
   }
 }
 
+// Another way to iterate through the rows
 for (const score of scores) {
-  console.log(score);
+  console.log(score); // Output: each student's scores array
 }
 
-// Traditional `for` loop when index is needed
-for (let i = 0; i < scores.length; i++) {
-  for (let j = 0; j < scores[i].length; j++) {
-    console.log(scores[i][j]);
+// Traditional for loop with index access to elements
+for (let i = 0; i < scores.length; i++) { // Outer loop: iterates through rows
+  for (let j = 0; j < scores[i].length; j++) { // Inner loop: iterates through columns
+    console.log(scores[i][j]); // Accessing element at row i and column j
   }
 }
 
+// Finding the maximum value in the 2D array using forEach
 let max = 0;
-
-scores.forEach((score) => {
-  score.forEach((value) => {
+scores.forEach((score) => { // Iterate through each row
+  score.forEach((value) => { // Iterate through each value in the row
     if (value > max) {
-      max = value;
+      max = value; 
     }
   });
 });
-console.log(max);
+console.log(max); // Output: 90
 
+
+// Function to calculate the maximum value in a 2D array
 function calculateMaxValue(data) {
   let max = 0;
   data.forEach((score) => {
@@ -60,7 +72,8 @@ function calculateMaxValue(data) {
   return max;
 }
 
-console.log(calculateMaxValue(scores));
+// Calling the function and printing the result
+console.log(calculateMaxValue(scores)); // Output: 90
 
 //To declare an empty multidimensional array, you use the same syntax as declaring one-dimensional array:
 //let activities = [];
